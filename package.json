@@ -1,0 +1,50 @@
+{
+  "name": "ckeditor-electron",
+  "version": "33.0.0",
+  "description": "An Electron rich text editor written with CKEditor.",
+  "main": "main.js",
+  "repository": "https://github.com/mingong/ckeditor-electron",
+  "keywords": [
+    "Electron",
+    "CKEditor"
+  ],
+  "author": "Min Wang. <mgongwang@163.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "electron-prompt": "^1.7.0"
+  },
+  "devDependencies": {
+    "electron": "13.0.0",
+    "electron-builder": "22.4.0"
+  },
+  "build": {
+    "appId": "CKEditor - Electron",
+    "win": {},
+    "linux": {
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "fileAssociations": [
+      {
+        "name": "Markdown File",
+        "ext": "md"
+      },
+      {
+        "name": "Markdown File",
+        "ext": "markdown"
+      }
+    ],
+    "asar": true
+  },
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "start": "electron ."
+  }
+}
